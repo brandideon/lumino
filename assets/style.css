@@ -1,0 +1,269 @@
+/*
+Theme Name: Luminio
+Theme URI: https://gitlab.com/brandideon1/treeluminio-theme.git
+Author: Brandideon | Michal Halaj
+Author URI: https://brandideon.com/
+Version: 1.1.0
+*/
+
+
+/* Global style*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700;800&display=swap');
+
+
+:root {
+    --primary-color:#FFD700;
+    --contrast-color:#e8e8e8;
+}
+
+
+html,body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Sora', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.relative {
+    position: relative;
+}
+
+
+.absolute {
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+.page-wrapper {
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+.p-s-t {
+    padding-top: 160px;
+    padding-bottom: 60px;
+}
+
+
+.p-s {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.m-1 {
+    margin: 1em;
+}
+
+
+.section-padding {
+    padding: 1em;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+/* end global style*/
+
+
+/* grid setting*/
+.grid-2 {
+    display: grid;
+    grid-template-columns: 50%50%;
+}
+
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 33%33%33%;
+}
+
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 25%25%25%25%;
+}
+
+
+.align-items-center {
+    align-items: center;
+}
+
+
+.justify-items-center {
+    justify-content: center;
+}
+/*end grid setting*/
+
+
+/* color-setting*/
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+
+.bg-contrast {
+    background-color: var(--contrast-color);
+}
+.bg-white {
+    background-color: white;
+}
+
+
+.color-white {color: white;}
+
+
+.color-primary {
+    color: var(--primary-color);
+}
+/*end color-setting*/
+
+
+/* font setting*/
+.big-size {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+
+.medium-size {
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+
+p, a {
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+
+
+  a {
+    text-decoration: none;
+  }
+
+
+.heading-before {
+    position: relative;
+    margin-left: 70px;
+    width: max-content;
+}
+
+
+.center-text-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.heading-before::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: -70px;
+    width: 50px;
+    height: 5px;
+    content: '';
+    background-color: var(--primary-color);
+}
+
+
+.center-text {
+    text-align: center;
+}
+/* end font setting*/
+
+
+/* footer*/
+.logo-footer img {
+    width: 120px;
+    height: auto;
+  }
+/* end footer*/
+
+
+/* ul setting*/
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+ul li {
+    margin: 0;
+    list-style: none;
+}
+/* end ul setting*/
+
+
+/* button setting*/
+
+
+a.button-white {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0.5em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    display: inline-block;
+}
+
+
+.button-m-t {margin-top: 0.5em;}
+
+
+ a.button-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    display: inline-block;
+}
+/* end button setting*/
+
+
+@media only screen and (max-width: 991px) {
+
+
+    .grid-2, .grid-3, .grid-4, .grid-2.grid-center-align.ref-homepage {
+        grid-template-columns: 100%;
+    }
+
+
+    .big-size {
+        font-size: 1.5rem;
+    }
+
+
+    .medium-size {
+        font-size: 1.2rem;
+    }
+}
+

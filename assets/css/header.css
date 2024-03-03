@@ -1,0 +1,216 @@
+/*Navbar*/
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 9998;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+}
+
+
+
+
+nav img {
+    height: 60px;
+    width: auto;
+}
+
+
+nav ul a {
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+
+nav ul {
+    display: flex;
+}
+
+
+nav ul li {
+    padding-left: 1.2em;
+    list-style: none;
+}
+
+
+.m-nav {
+    display: none;
+    top: 100px;
+    width: 100%;
+    background: white;
+    padding: 1em;
+    min-height: 100vh;
+    top: 0;
+    z-index: 99;
+}
+
+
+.m-nav ul {
+    display: block;
+}
+
+
+.m-nav ul a {color: black;}
+
+
+.m-nav.on {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+
+.m-nav.on::-webkit-scrollbar {
+    display: none;
+  }
+ 
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .m-nav.on {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+.tog {
+    display: none;
+}
+
+
+.toggle {
+    cursor: pointer;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.line-toggle {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    border-radius: 5px;
+    transition: all .6s;
+}
+
+
+.line-toggle:first-child {
+    transform: translateY(-5px) translateX(-2px);
+    width: 20px;
+    transition-delay: 0s;
+}
+
+
+.toggle .line-toggle:nth-child(2) {
+    transition-delay: .12s;
+}
+
+
+.line-toggle:last-child {
+    transform: translateY(5px) translateX(-2px);
+    width: 20px;
+    transition-delay: 0s;
+}
+
+
+.toggle.activate .line-toggle:first-child {
+    background: white;
+    transform: translateY(0) translateX(0) rotate(45deg);
+    width: 40px;
+    height: 2px;
+    transition-delay: .1s;
+}
+
+
+.toggle.activate .line-toggle:nth-child(2) {
+    transform: translateX(110px);
+    transition-delay: 0s;
+}
+
+
+.toggle.activate .line-toggle:last-child {
+    background: white;
+    transform: translateY(0) translateX(0) rotate(314deg);
+    width: 40px;
+    height: 2px;
+    transition-delay: .1s;
+}
+
+
+.right-menu {
+    align-items: center;
+    display: flex;
+}
+
+
+.right-menu * {
+    padding-right: 0.5em;
+}
+
+
+section.pc-nav * {
+    padding: 0;
+}
+
+
+section.pc-nav li {
+    padding-right: 1em;
+}
+
+
+section.kontakt a.white-btn {
+    margin-top: 0;
+}
+
+
+section.kontakt {
+    padding-right: 1em;
+}
+
+
+section.logoo {
+    display: flex;
+    align-items: center;
+}
+/*end navbar */
+
+
+@media only screen and (max-width: 991px) {
+    .tog {
+        display: block;
+    }
+    .pc-nav {
+        display: none;
+    }
+
+
+    nav.pc {
+        justify-content: space-between;
+    }
+
+
+    .m-nav ul {padding-left: 0;}
+    .m-nav ul li {padding-left: 0;}
+    .m-nav.on a {
+        display: inline-block;
+      }
+
+
+}
+
