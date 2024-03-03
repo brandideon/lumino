@@ -1,0 +1,1 @@
+postup a nazvy
